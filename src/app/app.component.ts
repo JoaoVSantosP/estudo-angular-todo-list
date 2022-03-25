@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todolist';
+
+  public tarefa = "";
+  public items = ['Tarefa 1'];
+
+  addTarefa() {
+    this.items.push(this.tarefa);    
+  }
+
+  removeTarefa(item: any) {
+    this.items.splice(this.items.indexOf(item), 1);
+  }
 }
